@@ -7,6 +7,17 @@ TODO: Describe what this project is for
 
 ## ...
 
+## Useful Links
+
+
+- https://www.digitalocean.com/community/tech-talks/getting-started-with-flask
+- ...
+- https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy
+- https://www.digitalocean.com/community/tutorials/how-to-use-templates-in-a-flask-application
+- https://python-adv-web-apps.readthedocs.io/en/latest/flask3.html
+- https://flask.palletsprojects.com/en/2.3.x/templating/
+- https://flask.palletsprojects.com/en/2.3.x/tutorial/
+- https://realpython.com/flask-blueprint/
 
 ## Setting Up
 
@@ -25,8 +36,9 @@ pip install -r requirements.txt
 
 set PATH=%PATH%;c:\laragon\bin\nodejs\node-v18
 
+```node
 npx tailwindcss -i ./src/main.css -o ./static/css/public.css --watch  
-
+```
 
 ### Run Flask App
 
