@@ -177,7 +177,7 @@ Get
   "timestamp": "<STRING_ISO_DATE_TIME>",
   "data": {
     "action": "get",
-    "name": "<STRING_ACTUATOR_NAME>",
+    "name": "<STRING_ACTUATOR_NAME>"
   }
 }
 ```
@@ -189,7 +189,7 @@ Example could be:
   "timestamp": "2023-05-22T23:21:19Z",
   "data": {
     "action": "get",
-    "name": "extraction-fan-01",
+    "name": "extraction-fan-01"
   }
 }
 ```
