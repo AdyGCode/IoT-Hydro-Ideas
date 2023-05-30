@@ -2,6 +2,7 @@
 .idea
 .idea/*
 .idea/**
+/vevn*/**
 
 ### NotepadPP template
 # Notepad++ backups #

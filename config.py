@@ -9,5 +9,6 @@ class Config:
         or 'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # Enable Flask's debugging features. Should be False in production
-    DEBUG = True
-
+    FLASK_DEBUG = True
+    TEMPLATES_AUTO_RELOAD = True
+    FLASK_ENV="development"

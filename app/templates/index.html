@@ -3,39 +3,48 @@
 {% block title %} Hydro Ideas {% endblock %}
 
 {% block page_header %}
-    <header class="max-w-3xl">
-        <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">Sticky Header using
-            Tailwind CSS</h1>
-        <p class="mt-2 text-lg text-gray-800 dark:text-gray-400">This example is a quick exercise to
-            illustrate how fixed to top navbar works using Tailwind CSS. As you scroll, it will remain fixed
-            to the top of your browser's viewport.</p>
-    </header>
+<header class="max-w-3xl">
+    <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">
+        Sticky Header using Tailwind CSS</h1>
+    <p class="mt-2 text-lg text-gray-800 dark:text-gray-400">This example is a quick exercise to
+        illustrate how fixed to top navbar works using Tailwind CSS. As you scroll, it will remain fixed
+        to the top of your browser's viewport.</p>
+</header>
 {% endblock %}
 
 {% block content %}
-    <div>
-            https://preline.co/examples.html
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 lg:mb-8">
-
-        {%  for card in cards %}
-            <!-- Card -->
-<div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-    <div class="h-52 flex flex-col justify-center items-center bg-purple-600 rounded-t-xl text-7xl text-white">
-        {{  card.value }}
-    </div>
-    <div class="p-4 md:p-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
-            {{ card.name }}
-        </h3>
-
-    </div>
-
+<div class="my-6">
+    https://preline.co/examples.html
 </div>
-<!-- End Card -->
-        {% endfor %}
+
+<div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 lg:mb-8">
+
+    {% for a_card in cards %}
+    <!-- Card -->
+    <div class="group flex flex-col h-full
+                rounded-xl
+                shadow-lg shadow-{{ a_card.bdr }}-900
+                border border-{{ a_card.bdr }}-500
+                dark:border-{{ a_card.bdr }}-700
+                ">
+        <div class="h-36 flex flex-col justify-center items-center  bg-{{ a_card.bg }}-600 dark:bg-{{ a_card.bg}}-900
+                text-5xl lg:text-7xl text-{{a_card.fg}} rounded-t-xl ">
+            {{ a_card.value }}
         </div>
+        <div class="p-4 md:p-6 bg-white dark:bg-black rounded-b-xl text-center content-center">
+            <h3 class="text-xl font-semibold rounded-b-xl bg-white dark:bg-black
+                       text-{{ a_card.bdr }}-800
+                       hover:text-{{ a_card.bdr }}-500
+                       dark:hover:text-{{a_card.fg}}">
+                {{ a_card.name }} <br> {{ a_card.scale }}
+            </h3>
+
+        </div>
+
+    </div>
+    <!-- End Card -->
+    {% endfor %}
+</div>
 {% endblock %}
 
 {% block page_footer %} {% endblock %}
